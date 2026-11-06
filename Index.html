@@ -14,7 +14,8 @@
         <div class="container-fluid">
             <a class="navbar-brand text-success fw-bold" href="#">Hospital Plantitas Verdes</a>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link active" href="#pacientes">Pacientes</a>
+                <a class="nav-link active" href="#">Inicio</a>
+                <a class="nav-link" href="#pacientes">Pacientes</a>
                 <a class="nav-link" href="#empleados">Empleados</a>
                 <a class="nav-link" href="#turnos">Turnos</a>
             </div>
@@ -26,6 +27,49 @@
             <h1>Hospital Plantitas Verdes</h1>
             <p>Cuidando de tu salud de manera natural</p>
         </header>
+
+    <!--imagenes 100% real no feik, la cosa esa del comienzo donde pasan imagenes-->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide shadow rounded-4 overflow-hidden mb-5" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+              <img src="img/img1.jpeg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Vista del Hospital Plantitas Verdes">
+            </div>
+            
+            <div class="carousel-item">
+              <img src="img/img2.jpeg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Recepción del hospital">
+            </div>
+            
+            <div class="carousel-item">
+              <img src="img/img3.jpeg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Consultorios médicos">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/img4.jpeg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Instalaciones internas">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+
+        <!--parte de delirios -->
+        <section id="nosotros" class="caja p-4 rounded mb-5 shadow-sm">
+            <h2 class="h3 mb-3 text-success fw-bold">Nuestra Historia y Misión</h2>
+            <p class="text-muted fst-italic">Cuidando de tu salud de manera natural desde el corazón de la Patagonia.</p>
+            
+            <p>🌱 El <strong>Hospital Plantitas Verdes</strong> nació de la visión del Dr. Plantancio Verde, quien creía firmemente que la medicina convencional
+                 y el poder de la naturaleza debían unirse para ofrecer una atención más humana, ecológica y cercana a las personas. 🌱 </p><hr>
+
+        <!-- la setshion de pacientes feos-->
 
         <section id="pacientes" class="caja p-4 rounded mb-5">
             <h2 class="h3 mb-3">Registrar Paciente</h2>
@@ -53,6 +97,8 @@
                 <button type="submit" class="btn btn-verde">Registrar Paciente</button>
             </form>
         </section>
+
+        <!-- la setshion de empleados feos-->
 
         <section id="empleados" class="caja p-4 rounded mb-5">
             <h2 class="h3 mb-3">Registro de Empleados</h2>
@@ -89,6 +135,8 @@
             </form>
         </section>
 
+        <!-- la setshion de turnitos feos-->
+
         <section id="turnos" class="caja p-4 rounded mb-5">
             <h2 class="h3 mb-3">Agendar Turno</h2>
             <form>
@@ -123,6 +171,17 @@
             </form>
         </section>
     </div>
+
+        <hr class="mt-5 mb-4 text-success">
+        
+        <footer class="text-center text-muted mb-4">
+            <div class="container">
+                <p class="mb-1 fw-bold text-success">Hospital Plantitas Verdes</p>
+                <p class="mb-1 fst-italic">Fundador: Dr. Plantancio Verde</p>
+                <p class="mb-1">📞 Recepción: 2966-456789 | 🚑 Urgencias / Ambulancia: 107</p>
+                <p class="small text-secondary mt-2">© 2026 - Cuidando tu salud de manera natural</p>
+            </div>
+        </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="sistema.js"></script>
