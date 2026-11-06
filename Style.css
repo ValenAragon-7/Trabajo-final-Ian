@@ -1,0 +1,40 @@
+body {
+    background-color: #c7e4c7;
+    font-family: Arial, sans-serif;
+}
+
+.mi-nav {
+    background-color: #f7efef;
+}
+
+.mi-titulo h1 {
+    color: #198754;
+    font-weight: bold;
+}
+
+.mi-titulo p {
+    color: #6c757d;
+}
+
+.caja {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.caja h2 {
+    color: #198754;
+    border-bottom: 2px solid #e8f5e9;
+    padding-bottom: 8px;
+}
+
+.btn-verde {
+    background-color: #198754;
+    color: white;
+    border: none;
+}
+
+.btn-verde:hover {
+    background-color: #146c43;
+    color: white;
+}
