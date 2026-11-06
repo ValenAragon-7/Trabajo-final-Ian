@@ -43,41 +43,44 @@ class Paciente {
     }
 }
 
-class SistemaTurno{
-    constructor(){
-        this.pacientes=[];
-        this.turnos=[];
+class SistemaTurno {
+    constructor() {
+        this.pacientes = [];
+        this.turnos = [];
         this.cargarDatos();
     }
-    cargarDatos(){
-    let pacientes = localStorange.getItem("pacientes");
-    let turno = localStorange.getItem("turnos");
-    if (pacientes != null){
-        this.pacientes=JSON.parse(pacientes);
-    }
-    if (turno != null){
-        this.turnos=JSON.parse(turnos);
-    }
-}
 
-guardarDatos(){
-    localStorage.storage.getItem("pacientes",JSON.stringify(this.pacientes));
-    localStorage.setItem("turnos",JSON.stringify(this.turnos));
-}
-
-buscarPaciente(dni){
-    for (let i = 0; i < this.pacientes.length; i++) {
-        if (this.pacientes[i].dni == dni) {
-            return this.pacientes[i]; 
+    cargarDatos() {
+        let pacientes = localStorage.getItem("pacientes");
+        let turnosData = localStorage.getItem("turnos");
+        if (pacientes != null) {
+            this.pacientes = JSON.parse(pacientes);
+        }
+        if (turnosData != null) {
+            this.turnos = JSON.parse(turnosData);
         }
     }
-    return null;
-}
-}
 
-buscarTurno(id){
-    //lo mismo pero con id
-}
+    guardarDatos() {
+        localStorage.setItem("pacientes", JSON.stringify(this.pacientes));
+        localStorage.setItem("turnos", JSON.stringify(this.turnos));
+    }
 
-}
+    buscarPaciente(dni) {
+        for (let i = 0; i < this.pacientes.length; i++) {
+            if (this.pacientes[i].dni == dni) {
+                return this.pacientes[i]; 
+            }
+        }
+        return null;
+    }
 
+    buscarTurno(id) {
+        for (let i = 0; i < this.turnos.length; i++) {
+            if (this.turnos[i].id == id) {
+                return this.turnos[i]; 
+            }
+        }
+        return null;
+    }
+}
