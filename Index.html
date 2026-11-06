@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <title>Hospitalito Plantitas Verdes</title>
+</head>
+
+<body>
+
+    <ul class="nav justify-content-center bg-white py-2 shadow-sm mb-4">
+        <li class="nav-item">
+            <a class="nav-link active text-success fw-bold" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#turnos">Turnos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#empleados">Empleados</a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <header class="text-center mb-4">
+            <h1>Hospital Plantitas Verdes</h1>
+            <p class="text-muted">Cuidando de tu salud de manera natural</p>
+        </header>
+
+        <section id="pacientes" class="caja p-4 bg-white shadow-sm rounded mb-4">
+            <h2 class="mb-3">Registrar Pacientes</h2>
+            <form id="form_pacientes">
+                <div class="mb-3">
+                    <label for="nom_paci" class="form-label">Ingrese su nombre:</label>
+                    <input type="text" id="nom_paci" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="apell_paci" class="form-label">Ingrese su apellido:</label>
+                    <input type="text" id="apell_paci" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fec_naci_paci" class="form-label">Ingrese su fecha de nacimiento:</label>
+                    <input type="date" id="fec_naci_paci" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="dni_paci" class="form-label">Ingrese su DNI:</label>
+                    <input type="number" id="dni_paci" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-success">Registrar Paciente</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="container" style="max-width: 600px;">
+        <section id="empleados" class="caja p-4 bg-white shadow-sm rounded mb-4">
+            <h2 class="mb-3">Registro de Empleados / Profesionales</h2>
+            
+            <form id="form_empleados">
+                <div class="mb-3">
+                    <label for="emp_nombre" class="form-label">Nombre del empleado:</label>
+                    <input type="text" id="emp_nombre" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="emp_apellido" class="form-label">Apellido del empleado:</label>
+                    <input type="text" id="emp_apellido" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="emp_especialidad" class="form-label">Especialidad / Área en la que va a trabajar:</label>
+                    <select id="emp_especialidad" class="form-select" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="Administracion">Administración / Recepción</option>
+                        <option value="Clinica Medica y General">Clínica Médica y General</option>
+                        <option value="Pediatria">Pediatría</option>
+                        <option value="Cardiologia y Arritmologia">Cardiología y Arritmología</option>
+                        <option value="Salud Mental y Psiquiatria">Salud Mental y Psiquiatría (adultos e infantiles)</option>
+                        <option value="Dermatologia">Dermatología</option>
+                        <option value="Neumonologia">Neumonología</option>
+                        <option value="Endocrinologia">Endocrinología</option>
+                        <option value="Ginecologia y Obstetricia">Ginecología y Obstetricia</option>
+                        <option value="Neonatologia">Neonatología</option>
+                        <option value="Traumatologia">Traumatología</option>
+                        <option value="Oftalmologia">Oftalmología</option>
+                        <option value="Otorrinolaringologia">Otorrinolaringología</option>
+                        <option value="Cirugia">Cirugía (general, plástica, estética, reparadora y vascular)</option>
+                        <option value="Neurocirugia">Neurocirugía</option>
+                        <option value="Urologia">Urología</option>
+                        <option value="Gastroenterologia">Gastroenterología</option>
+                        <option value="Nefrologia">Nefrología</option>
+                        <option value="Reumatologia">Reumatología</option>
+                        <option value="Hematologia y Oncologia">Hematología y Oncología</option>
+                        <option value="Medicina Critica y Terapia Intensiva">Medicina Crítica y Terapia Intensiva</option>
+                        <option value="Fisiatria y Kinesiologia">Fisiatría y Kinesiología</option>
+                        <option value="Diabetologia">Diabetología</option>
+                        <option value="Genetica">Genética</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="emp_codigo" class="form-label">Contraseña:</label>
+                    <input type="password" id="emp_codigo" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Registrar Empleado</button>
+            </form>
+        </section>
+    </div>
+
+
+    <div class="container">
+        <section id="turnos" class="caja p-4 bg-white shadow-sm rounded mb-4">
+            <h2 class="mb-3">Agendar turnos</h2>
+            <form id="form_turnos">
+                <div class="mb-3">
+                    <label for="T_edad" class="form-label">Ingrese su edad:</label>
+                    <input type="number" id="T_edad" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="T_especialidad" class="form-label">Especialidad:</label>
+                    <select id="T_especialidad" class="form-select" required>
+                        <option value="" selected disabled>Seleccione una especialidad</option>
+                        <option value="Clinica Medica y General">Clínica Médica y General</option>
+                        <option value="Pediatria">Pediatría</option>
+                        <option value="Cardiologia y Arritmologia">Cardiología y Arritmología</option>
+                        <option value="Salud Mental y Psiquiatria">Salud Mental y Psiquiatría (adultos e infantiles)</option>
+                        <option value="Dermatologia">Dermatología</option>
+                        <option value="Neumonologia">Neumonología</option>
+                        <option value="Endocrinologia">Endocrinología</option>
+                        <option value="Ginecologia y Obstetricia">Ginecología y Obstetricia</option>
+                        <option value="Neonatologia">Neonatología</option>
+                        <option value="Traumatologia">Traumatología</option>
+                        <option value="Oftalmologia">Oftalmología</option>
+                        <option value="Otorrinolaringologia">Otorrinolaringología</option>
+                        <option value="Cirugia">Cirugía (general, plástica, estética, reparadora y vascular)</option>
+                        <option value="Neurocirugia">Neurocirugía</option>
+                        <option value="Urologia">Urología</option>
+                        <option value="Gastroenterologia">Gastroenterología</option>
+                        <option value="Nefrologia">Nefrología</option>
+                        <option value="Reumatologia">Reumatología</option>
+                        <option value="Hematologia y Oncologia">Hematología y Oncología</option>
+                        <option value="Medicina Critica y Terapia Intensiva">Medicina Crítica y Terapia Intensiva</option>
+                        <option value="Fisiatria y Kinesiologia">Fisiatría y Kinesiología</option>
+                        <option value="Diabetologia">Diabetología</option>
+                        <option value="Genetica">Genética</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success">Agendar Turno</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="sistema.js"></script>
+</body>
+</html>
