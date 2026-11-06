@@ -1,9 +1,46 @@
-class turnos{
-
+class Turno {
+    constructor(id, dniPaciente, especialidad, fecha) {
+        this.id = id;            
+        this.dniPaciente = dniPaciente; 
+        this.especialidad = especialidad;
+        this.fecha = fecha;
+    }
+    getId() {
+        return this.id;
+    }
+    getDniPaciente() {
+        return this.dniPaciente;
+    }
+    getEspecialidad() {
+        return this.especialidad;
+    }
+    setEspecialidad(nuevaEspecialidad) {
+        this.especialidad = nuevaEspecialidad;
+    }
 }
 
-class pacientes{
-
+class Paciente {
+    constructor(nombre, apellido, fechaNacimiento, dni) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+        this.dni = dni;
+    }
+    getNombre() {
+        return this.nombre;
+    }
+    getApellido() {
+        return this.apellido;
+    }
+    getDni() {
+        return this.dni;
+    }
+    setNombre(nuevoNombre) {
+        this.nombre = nuevoNombre;
+    }
+    setDni(nuevoDni) {
+        this.dni = nuevoDni;
+    }
 }
 
 class SistemaTurno{
@@ -29,10 +66,18 @@ guardarDatos(){
 }
 
 buscarPaciente(dni){
-    //metodo busca al paciente en vector
-    //si lo encuentra devuelve el paciente (return).
-    //si no devuelve null. 
-
+    for (let i = 0; i < this.pacientes.length; i++) {
+        if (this.pacientes[i].dni == dni) {
+            return this.pacientes[i]; 
+        }
+    }
+    return null;
 }
+}
+
+buscarTurno(id){
+    //lo mismo pero con id
+}
+
 }
 
