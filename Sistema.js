@@ -1,4 +1,4 @@
-class Turno {
+class turno {
     constructor(id, dniPaciente, especialidad, fecha) {
         this.id = id;            
         this.dniPaciente = dniPaciente; 
@@ -87,10 +87,16 @@ class SistemaTurno {
         for( let i = 0; i<this.turnos.length; i++){
             let tActual=this.turnos[i];
             if(tActual.getCod()!=idExcluir && tActual.getTipo()==tipo && tActual.getFecha())){
-                return False;
+                return false;
             }   
         }
     }
+    registrarTurno(turno){
+        if(!this.horarioDisponible(turno.getTipo(),turno.getFecha())){
+            return false;
+        }
+        this.turnos.push(turno);
+        this.guardarDatos();
+        return true;
+    }
 }
-
-//dolor de cabeza para mañana, gracias.
