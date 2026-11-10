@@ -83,6 +83,14 @@ class SistemaTurno {
         }
         return null;
     }
+    horarioDisponible(tipo,fecha,hora,idExcluir=null){
+        for( let i = 0; i<this.turnos.length; i++){
+            let tActual=this.turnos[i];
+            if(tActual.getCod()!=idExcluir && tActual.getTipo()==tipo && tActual.getFecha())){
+                return False;
+            }   
+        }
+    }
 }
 
 //dolor de cabeza para mañana, gracias.
